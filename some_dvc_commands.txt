@@ -1,0 +1,16 @@
+ ls -a
+ mkdir ../local_remote_dir
+ dvc remote add -d localremote ../local_remote_dir
+ dvc remote list
+ head .dvc/config
+ dvc add sample.csv
+ dvc status
+ dvc remote list
+ ls -a
+ head .gitignore
+ head sample.csv.dvc
+ git status
+ git add .
+ git commit -m "Initial commit of tracked sample.csv"
+ dvc push
+ history
